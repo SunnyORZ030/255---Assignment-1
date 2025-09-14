@@ -1,7 +1,6 @@
 # CMPE 255 — Assignment 1: Do Data Science with ChatGPT
 
-> Semester: Fall 2025  
-> Student: (Your Name)  
+> Semester: Fall 2025   
 > Date: 2025-09-13
 
 ## 🎯 Objective
