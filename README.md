@@ -37,6 +37,8 @@ assignment-1/
 - Open `notebooks/assignment1_titanic.ipynb` in **Google Colab**.
 - Option A: Upload `train.csv` manually；Option B: use Kaggle API to download the Titanic dataset.
 - Run cells top-to-bottom; artifacts/metrics will be saved into `artifacts/` and `results/`.
+- [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)]
+(https://colab.research.google.com/github/SunnyORZ030/255---Assignment-1/blob/main/notebooks/assignment1_titanic.ipynb)
 
 ## 🧪 Reproducibility
 - Python: 3.10+
