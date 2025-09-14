@@ -1,58 +1,48 @@
 # CMPE 255 — Assignment 1: Do Data Science with ChatGPT
 
-> Semester: Fall 2025   
-> Date: 2025-09-13
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/SunnyORZ030/255---Assignment-1/blob/main/notebooks/assignment1_titanic.ipynb)
 
-## 🎯 Objective
-Use **ChatGPT as a copilot** to complete an end-to-end data science workflow on a dataset from **Kaggle**.
+## Dataset
+- **Kaggle:** [Titanic — Machine Learning from Disaster](https://www.kaggle.com/competitions/titanic)
+- **Target:** `Survived` (0 = not survived, 1 = survived)
+- **Task:** Binary classification
 
-## ✅ Dataset Chosen (Newbie-friendly)
-- **Dataset**: *Titanic — Machine Learning from Disaster* (Kaggle)  
-- **Target (目標欄位)**: `Survived`（0=未存活, 1=存活）  
-- **Task**: Binary Classification  
-- **Suggested features**: Drop identifiers like `PassengerId`, `Name`, `Ticket`, `Cabin` for the baseline.
+## Objective
+Use ChatGPT as a copilot to complete an end-to-end ML workflow: data understanding, preprocessing, model training, evaluation, and reporting. Capture all artifacts and make the repository reproducible.
 
-## 📁 Repo Layout
-```
-assignment-1/
-  ├─ README.md
-  ├─ prompts.md
-  ├─ transcript.md
-  ├─ requirements.txt
-  ├─ .gitignore
-  ├─ data/
-  ├─ notebooks/
-  │   ├─ assignment1.ipynb             ← generic
-  │   └─ assignment1_titanic.ipynb     ← prefilled with target & steps
-  ├─ src/
-  │   └─ utils.py
-  ├─ artifacts/
-  └─ results/
-```
+## Method (Summary)
+- **Split:** train/dev/test with stratification on `Survived`.
+- **Preprocessing:**  
+  - Numeric: median imputation → standardization  
+  - Categorical: most-frequent imputation → one-hot encoding
+- **Models compared:** Logistic Regression vs RandomForest; choose the best on the dev set, then retrain on train+dev and evaluate on test.
+- **Metrics:** Accuracy, F1 (macro), ROC-AUC.
 
-## 🛠️ Steps (High-level)
-1. Data Understanding → 2. Data Preparation → 3. Modeling → 4. Evaluation → 5. Iteration → 6. Report & Artifacts
+## Key Results (Test)
+- **Best model (dev):** `TODO: model_name`
+- **Accuracy:** `TODO: 0.xxx`
+- **F1 (macro):** `TODO: 0.xxx`
+- **ROC-AUC:** `TODO: 0.xxx`
 
-## ▶️ How to run (Colab)
-- Open `notebooks/assignment1_titanic.ipynb` in **Google Colab**.
-- Option A: Upload `train.csv` manually；Option B: use Kaggle API to download the Titanic dataset.
-- Run cells top-to-bottom; artifacts/metrics will be saved into `artifacts/` and `results/`.
-- [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)]
-(https://colab.research.google.com/github/SunnyORZ030/255---Assignment-1/blob/main/notebooks/assignment1_titanic.ipynb)
+> Full numbers: [`results/test_summary.csv`](results/test_summary.csv)  
+> Dev comparison: [`results/dev_scores.csv`](results/dev_scores.csv)
 
-## 🧪 Reproducibility
-- Python: 3.10+
-- Install deps: `pip install -r requirements.txt`
-- Use a fixed `random_state` for splits.
+## Artifacts
+- Dev confusion matrix: ![confusion matrix (dev)](artifacts/confusion_matrix_dev.png)  
+- Dev ROC curve (if available): ![ROC (dev)](artifacts/roc_curve_dev.png)  
+- *(Optional)* Test confusion matrix: `artifacts/confusion_matrix_test.png`  
+- *(Optional)* Classification report (test): [`results/classification_report_test.csv`](results/classification_report_test.csv)
 
-## 📈 Fill after you run
-- Best Model: …  
-- Metrics: Accuracy=…, F1(macro)=…, ROC-AUC=…  
-- Takeaways: …  
+## How to Reproduce
+1. Click the **Open in Colab** badge above.  
+2. In Colab, upload `train.csv` to `/content/` **or** run the Kaggle API cell to download the Titanic data.  
+3. Run all cells top-to-bottom. Outputs will be written to `artifacts/` and `results/`.
 
-## ✅ Submission Checklist
-- [ ] Public GitHub repo
-- [ ] README updated with results
-- [ ] Transcript in `transcript.md`
-- [ ] Notebook runs end-to-end
-- [ ] Artifacts saved to `artifacts/` or `results/`
+## How ChatGPT Helped
+- Planned the CRISP-DM-style workflow and generated EDA/preprocessing code.
+- Suggested baseline and comparison models, metrics, and plotting code.
+- Helped package outputs and write this README.
+
+## Next Steps (Optional)
+- Simple feature engineering: `FamilySize`, `IsAlone`, age binning.
+- Hyperparameter tuning, cross-validation, feature importance and error analysis.
