@@ -6,3 +6,10 @@ artifacts/*
 results/*
 kaggle.json
 .env
+.DS_Store
+!artifacts/*.png
+!artifacts/*.jpg
+!artifacts/*.jpeg
+!artifacts/*.svg
+!results/*.csv
+!results/*.json
