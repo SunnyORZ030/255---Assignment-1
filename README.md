@@ -46,3 +46,5 @@ Use ChatGPT as a copilot to complete an end-to-end ML workflow: data understandi
 ## Next Steps (Optional)
 - Simple feature engineering: `FamilySize`, `IsAlone`, age binning.
 - Hyperparameter tuning, cross-validation, feature importance and error analysis.
+
+- Medium article: https://medium.com/@s9070292108/from-zero-to-baseline-using-chatgpt-as-a-ds-copilot-on-kaggles-titanic-8d8d0ef1b6ea
