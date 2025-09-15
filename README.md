@@ -30,8 +30,8 @@ Use ChatGPT as a copilot to complete an end-to-end ML workflow: data understandi
 ## Artifacts
 - Dev confusion matrix: ![confusion matrix (dev)](artifacts/confusion_matrix_dev.png)  
 - Dev ROC curve (if available): ![ROC (dev)](artifacts/roc_curve_dev.png)  
-- *(Optional)* Test confusion matrix: `artifacts/confusion_matrix_test.png`  
-- *(Optional)* Classification report (test): [`results/classification_report_test.csv`](results/classification_report_test.csv)
+- Test confusion matrix: `artifacts/confusion_matrix_test.png`  
+- Classification report (test): [`results/classification_report_test.csv`](results/classification_report_test.csv)
 
 ## How to Reproduce
 1. Click the **Open in Colab** badge above.  
@@ -43,7 +43,7 @@ Use ChatGPT as a copilot to complete an end-to-end ML workflow: data understandi
 - Suggested baseline and comparison models, metrics, and plotting code.
 - Helped package outputs and write this README.
 
-## Next Steps (Optional)
+## Next Steps
 - Simple feature engineering: `FamilySize`, `IsAlone`, age binning.
 - Hyperparameter tuning, cross-validation, feature importance and error analysis.
 
