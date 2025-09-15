@@ -19,10 +19,10 @@ Use ChatGPT as a copilot to complete an end-to-end ML workflow: data understandi
 - **Metrics:** Accuracy, F1 (macro), ROC-AUC.
 
 ## Key Results (Test)
-- **Best model (dev):** `TODO: model_name`
-- **Accuracy:** `TODO: 0.xxx`
-- **F1 (macro):** `TODO: 0.xxx`
-- **ROC-AUC:** `TODO: 0.xxx`
+- **Best model (dev):** `RandomForestClassifier`
+- **Accuracy:** `0.811`
+- **F1 (macro):** `0.798`
+- **ROC-AUC:** `0.823`
 
 > Full numbers: [`results/test_summary.csv`](results/test_summary.csv)  
 > Dev comparison: [`results/dev_scores.csv`](results/dev_scores.csv)
